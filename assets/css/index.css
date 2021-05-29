@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+:root {
+    --main-bg-primary: #0b090a;
+    --secondary-bg-color: #ba181b;
+}
+
+/* GENERAL */
+/* ****************************************************************************** */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-bg-primary);
+}
+
+hr {
+    height: 0.5px;
+    border-top: 0.5px dashed var(--secondary-bg-color);;
+}
+
+/* HEADER */
+/* **************************************************************************** */
+header {
+    background-color: var(--main-bg-primary);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw;
+    /* margin: auto 10vw; */
+    width: 100vw;
+}
+
+header .logo {
+    color: white;
+    font-size: 32px;
+    font-family: 'Noto Serif', serif;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+ul li a {
+    list-style: none;
+    color: var(--secondary-bg-color);
+    text-decoration: none;
+    margin: auto 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+ul li a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+ul li div {
+    height: 0;
+    width: 0;
+    transition: all 0.3s ease;
+}
+
+ul li a:hover + div {
+    height: 2px;
+    width: 100%;
+    background-color: var(--secondary-bg-color);
+}
+
+/* Top Section */
+/* ******************************************************************** */
+#top-section {
+    height: calc(100vh - 10vh);
+    background: url('../../img/E-Bike-1.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.tagline-bg {
+    background: linear-gradient(90deg,#0b090a, #0b090a5b);
+    height: 100%;
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 0 0 32px;
+}
+
+.top-tagline {
+    color: var(--secondary-bg-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 6vw;
+    line-height: 0.9;
+    margin-top: 20vh;
+}
+
+.tagline-bg p {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 8px 0px;
+    font-size: 1.5vw;
+}
+
+.order-buttons {
+    margin: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.custom-order, .order-existing {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    border-radius: 1000px;
+    padding: 6px 32px;
+    margin-bottom: 16px;
+    margin-right: 24px;
+    color: white;
+    box-shadow: 0 2px 100px 1px var(--secondary-bg-color);
+    transition: all 0.3s ease;
+}
+
+.custom-order {
+    background-color: var(--secondary-bg-color);
+}
+
+.order-existing {
+    background-color: white;
+    color: var(--main-bg-primary);
+    font-weight: 600;
+}
+
+.custom-order:hover{
+    background-color: #a9fcff8f;
+}
+
+.order-existing:hover{
+    background-color: #ba181b7a;
+    color: white;
+}
+
+.specs {
+    display: flex;
+    justify-content: center;
+    flex: 0 1 auto;
+    margin: 0px;
+    padding: 8px;
+    background: linear-gradient(180deg, transparent, #0b090a);
+}
+
+.motor, .design, .battery {
+    border: 2px solid var(--secondary-bg-color);
+    border-radius: 16px;
+    padding: 16px;
+    margin: 0 8px;
+    text-align: center;
+    width: 150px;
+    color: var(--secondary-bg-color);
+    background-color: #0b090a8f;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.motor span, .design span, .battery span {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.motor:hover, .design:hover, .battery:hover {
+    box-shadow: 0 0px 10px 1px var(--secondary-bg-color);
+}
+
+
+/* SERVICES */
+/* ************************************************************************** */
+#services, #about, #contact {
+    /* height: 100vh; */
+    padding: 32px;
+    box-shadow: 0 0px 20px 0px rgb(22, 22, 22);
+}
+
+#services > p , #about > p, #contact > p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* flex-wrap: wrap;
+    flex: 1 1 auto; */
+    justify-content: space-between;
+}
+
+.e-bike-service, .reg-bike-service, .c-bike-service, .e-bike-kit, .paint {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--secondary-bg-color);
+    border-radius: 16px;
+    padding: 16px;
+    margin: 10px 8px;
+    text-align: center;
+    /* width: 40%; */
+    color: var(--secondary-bg-color);
+    background-color: #0b090a8f;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.e-bike-service p, .reg-bike-service p, .c-bike-service p, .e-bike-kit p, .paint p {
+    font-size: 16px;
+    color: white;
+}
+
+.e-bike-service:hover, .reg-bike-service:hover, .c-bike-service:hover, .e-bike-kit:hover, .paint:hover{
+    box-shadow: 0 0px 10px 1px var(--secondary-bg-color);
+}
+
+
+/* ABOUT */
+/* ************************************************************************** */
+.abouts-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.about-1, .about-2, .about-3 {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 24px 8px;
+    padding: 16px;
+    /* border: 2px solid var(--secondary-bg-color); */
+    box-shadow: 0 0 10px 1px rgb(29, 29, 29);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.about-1:hover, .about-2:hover, .about-3:hover {
+    box-shadow: 0 0 10px 1px var(--secondary-bg-color);
+}
+
+.about-1 h3, .about-2 h3, .about-3 h3 {
+    color: var(--secondary-bg-color);
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.abouts-list img {
+    height: 200px;
+    max-width: 300px;
+    border-radius: 8px;
+    /* border: 2px solid var(--secondary-bg-color); */
+}
+
+.about-1 img, .about-3 img, .about-2 img {
+    float: left;
+    margin: 16px;
+}
+
+
+.about-1 p, .about-2 p, .about-3 p {
+    color: white;
+    font-size: 16px;
+    text-align: justify;
+    /* margin-right: 10px; */
+}
+
+
+/* CONTACT */
+/* ************************************************************************** */
+.contact-container {
+    display: flex;
+}
+
+.address, .contact, .social {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--secondary-bg-color);
+    border-radius: 16px;
+    padding: 16px;
+    margin: 10px 8px;
+    /* text-align: center; */
+    /* width: fit-content; */
+    color: white;
+    background-color: #0b090a8f;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+}
+
+.address h3, .contact h3, .social h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--secondary-bg-color);
+}
+
+
+.social span a {
+    margin-left: 16px;
+    margin-right: 16px;
+    text-decoration: none;
+    color: #bc2a8d;
+}
+
+.social span a:first-of-type {
+    color: #1778f2 ;
+}
+
+.social span a:last-of-type {
+    color: #03A9F4;
+}
+
+.contact-form label {
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.contact-form input, textarea {
+    border-radius: 4px;
+    margin-top: 4px;
+    padding: 4px 8px;
+}
+
+.contact-form button {
+    -webkit-appearance: button;
+    background-color: #03A9F4;
+    border: medium none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-size: 17px;
+    line-height: 1;
+    padding: 10px 20px;
+}
+
+/* FOOTER */
+/* ************************************************************************** */
+footer {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000814;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+footer .logo {
+    color: white;
+    font-size: 16px;
+    font-family: 'Noto Serif', serif;
+}
+
+
+/* Responsive */
+/* ************************************************************************** */
+
+@media screen and (max-width: 768px){
+    header .logo {
+        font-size: 24px;
+    }
+    nav ul {
+        display: none;
+    }
+    .service-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .abouts-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 460px){
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+
+    #services > p , #about > p, #contact > p {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .motor, .design, .battery {
+        width: 100px;
+    }
+
+    .motor span, .design span, .battery span {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .motor i, .design i, .battery i {
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .motor, .design, .battery {
+        width: 100px;
+        font-size: 12px;
+    }
+
+    .motor span, .design span, .battery span {
+        font-size: 10px;
+        font-weight: 900;
+    }
+
+    .motor i, .design i, .battery i {
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .top-tagline {
+        font-size: 10vw;
+    }
+
+    .tagline-bg p {
+        font-size: 1.8vw;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .top-tagline {
+        font-size: 12vw;
+    }
+
+    .tagline-bg p {
+        font-size: 2.5vw;
+    }
+
+    .custom-order, .order-existing {
+        font-size: 12px;
+        padding: 4px 24px;
+    }
+}
+
+@media screen and (max-width: 410px){
+    .top-tagline {
+        font-size: 12vw;
+    }
+
+    .tagline-bg p {
+        font-size: 3vw;
+    }
+
+    .custom-order, .order-existing {
+        font-size: 12px;
+        padding: 4px 24px;
+    }
+}
