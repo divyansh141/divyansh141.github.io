@@ -23,6 +23,15 @@ hr {
     border-top: 0.5px dashed var(--secondary-bg-color);;
 }
 
+a {
+    cursor: pointer;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
 /* HEADER */
 /* **************************************************************************** */
 header {
@@ -139,6 +148,10 @@ ul li a:hover + div {
     background-color: var(--secondary-bg-color);
 }
 
+.order-buttons a {
+    text-decoration: none;
+    color: white;
+}
 .order-existing {
     background-color: white;
     color: var(--main-bg-primary);
@@ -146,7 +159,7 @@ ul li a:hover + div {
 }
 
 .custom-order:hover{
-    background-color: #a9fcff8f;
+    background-color: #ba181b7a;
 }
 
 .order-existing:hover{
