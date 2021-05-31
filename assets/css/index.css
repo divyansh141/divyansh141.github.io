@@ -116,7 +116,7 @@ ul li a:hover + div {
     font-weight: 700;
     font-size: 6vw;
     line-height: 0.9;
-    margin-top: 20vh;
+    margin-top: 13vh;
 }
 
 .tagline-bg p {
@@ -124,6 +124,8 @@ ul li a:hover + div {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 8px 0px;
     font-size: 1.5vw;
+    /* display: grid;
+    grid-template-rows: 2fr 1fr; */
 }
 
 .order-buttons {
@@ -174,6 +176,7 @@ ul li a:hover + div {
     margin: 0px;
     padding: 8px;
     background: linear-gradient(180deg, transparent, #0b090a);
+    overflow: auto;
 }
 
 .motor, .design, .battery {
@@ -187,12 +190,14 @@ ul li a:hover + div {
     background-color: #0b090a8f;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .motor span, .design span, .battery span {
     font-size: 24px;
     font-weight: 700;
 }
+
 
 .motor:hover, .design:hover, .battery:hover {
     box-shadow: 0 0px 10px 1px var(--secondary-bg-color);
